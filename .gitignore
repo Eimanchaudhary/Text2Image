@@ -1,0 +1,110 @@
+####################################################
+# GITIGNORE FOR PROMPT2PIXEL / TEXT2IMAGE PROJECT
+####################################################
+
+# ===== Node / React / Frontend =====
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+build/
+dist/
+out/
+
+# Testing
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# ===== Environment Files =====
+.env
+.env.*
+.env.bak
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== Python =====
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== Virtual Environments =====
+venv/
+env/
+ENV/
+
+# ===== ML MODELS (DO NOT UPLOAD - HUGE FILES) =====
+prompt2pixel-backend/models/
+
+# Block ALL large ML extensions
+*.bin
+*.pth
+*.ckpt
+*.safetensors
+*.h5
+*.zip
+*.tar.gz
+*.7z
+*.onnx
+
+# ===== Generated / Output Images =====
+generated_images/
+outputs/
+results/
+
+# ===== Database Files =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== Flask =====
+instance/
+.webassets-cache
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+
+# ===== OS FILES =====
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+desktop.ini
+[Dd]esktop.ini
+
+####################################################
+# END OF .GITIGNORE
+####################################################
