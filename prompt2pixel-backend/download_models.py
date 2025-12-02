@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Script to download Stable Diffusion models locally
-Run this once before starting the application
-"""
-
 import os
 from diffusers import StableDiffusionPipeline, StableDiffusionXLPipeline
 import torch
@@ -16,7 +10,7 @@ def download_models():
     
     print("Downloading Stable Diffusion models...")
     
-    # Download Stable Diffusion 1.5
+   
     print("Downloading Stable Diffusion 1.5...")
     try:
         sd15_pipeline = StableDiffusionPipeline.from_pretrained(
@@ -29,7 +23,7 @@ def download_models():
     except Exception as e:
         print(f"✗ Failed to download SD 1.5: {e}")
     
-    # Download Stable Diffusion XL (optional)
+  
     print("Downloading Stable Diffusion XL...")
     try:
         sdxl_pipeline = StableDiffusionXLPipeline.from_pretrained(

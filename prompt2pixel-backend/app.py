@@ -4,14 +4,14 @@ import os
 import logging
 from models.image_generator import LocalImageGenerator
 
-# Setup logging
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app) 
 
-# Initialize the image generator
+
 try:
     image_generator = LocalImageGenerator(model_type="sd15", device="auto")
     logger.info("Image generator initialized successfully")
@@ -39,14 +39,14 @@ def generate_image():
         
         prompt = data['prompt']
         
-        # Validate prompt length
+       
         if len(prompt) > 1000:
             return jsonify({
                 "success": False,
                 "error": "Prompt too long (max 1000 characters)"
             }), 400
         
-        # Extract generation parameters
+       
         parameters = {
             'steps': data.get('steps', 20),
             'guidance': data.get('guidance', 7.5),
@@ -55,7 +55,7 @@ def generate_image():
             'seed': data.get('seed', -1)
         }
         
-        # Generate image
+      
         result = image_generator.generate_image(prompt, **parameters)
         
         if result['success']:
@@ -135,10 +135,10 @@ def home():
     })
 
 if __name__ == '__main__':
-    # Create necessary directories
+ 
     os.makedirs('generated_images', exist_ok=True)
     
-    # Start the server
+   
     app.run(
         host='0.0.0.0',
         port=5000,

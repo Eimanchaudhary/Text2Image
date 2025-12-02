@@ -1,18 +1,12 @@
-#!/usr/bin/env python3
-"""
-Alternative entry point that ensures proper imports
-"""
-
 import sys
 import os
 
-# Add current directory to Python path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from app import app
 
 if __name__ == '__main__':
-    # Create necessary directories
+  
     os.makedirs('generated_images', exist_ok=True)
     os.makedirs('models', exist_ok=True)
     
